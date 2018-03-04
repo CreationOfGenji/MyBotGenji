@@ -2,6 +2,8 @@
     "name": "genji",
     "version": "1.0.0",
     "description": "Heh, you'll see.",
+    "engine": {
+    "node": "8.9.4"
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
