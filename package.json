@@ -1,11 +1,11 @@
 {
   "name": "genji",
+  "description": "Heh, you'll see",
   "version": "1.0.0",
-  "description": "Heh, you'll see.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "engines": {
+    "node": "8.9.4"
+  }
+}
   "author": "genji",
   "license": "ISC",
   "dependencies": {
