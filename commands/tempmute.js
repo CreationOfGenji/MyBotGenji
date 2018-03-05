@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-var math - require("mathjs");
+var seconds = require("seconds");
 
 module.exports.run = async (bot, message, args) => {
 
@@ -37,12 +37,10 @@ module.exports.run = async (bot, message, args) => {
     message.reply(`<@${tomute.id}> has been muted for ${(mutetime)}, Hope it was for a good reason!`);
     
     
-    var mutetime2 = math.multiply(mutetime,1000);
        setTimeout(function(){
         tomute.removeRole(muterole.id);
         message.channel.send(`<@${tomute.id}> has been unmuted! MADA MADA`)  
-    }, (mutetime2));
-
+    }, seconds(mutetime));
 
 }
 
