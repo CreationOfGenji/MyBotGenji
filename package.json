@@ -4,7 +4,7 @@
   "description": "Heh, you'll see.",
   "main": "index.js",
   "scripts": {
-    "node": "8.9.4"
+    "node": "8.9.4",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "genji",
