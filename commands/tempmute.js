@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-var seconds = require("seconds");
+const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
 
@@ -14,15 +14,16 @@ module.exports.run = async (bot, message, args) => {
     if(!muterole){
         try{
             muterole = await message.guild.createRole({
-                name: "muted",
-                color: "#000000",
+                name: "Genji-Mute",
+                color: "#d50c0c",
                 permission:[]
             })
             message.guild.channels.forEach(async (channel, id) => {
                 await channel.overwritePermissions(muterole, {
                     SEND_MESSAGES: false,
                     ADD_REACTIONS: false,
-                    CHANGE_NICKNAME: false
+                    CHANGE_NICKNAME: false,
+                    
                 });
             });
         }catch(e){
@@ -34,13 +35,12 @@ module.exports.run = async (bot, message, args) => {
     if(!mutetime) return message.reply("You didn't specify a time!");
 
     await(tomute.addRole(muterole.id));
-    message.reply(`<@${tomute.id}> has been muted for ${(mutetime)}, Hope it was for a good reason!`);
-    
-    
-       setTimeout(function(){
+    message.reply(`<@${tomute.id}> has been muted for ${ms(mutetime)}ms, Hope it was for a good reason!`);
+
+    setTimeout(function(){
         tomute.removeRole(muterole.id);
         message.channel.send(`<@${tomute.id}> has been unmuted! MADA MADA`)  
-    }, seconds(mutetime));
+    }, ms(mutetime));
 
 }
 
