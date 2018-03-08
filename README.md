@@ -16,6 +16,8 @@ G.addrole: adds a role. Example: G.addrole @Cinna Pokemon Hunter (MUST HAVE PERM
 
 G.avatar: shows your avatar. Example: G.avatar
 
+G.roll: rolls a dice. Example: G.roll
+
 G.botinfo: shows the bot info
 
 G.report: reports a user. Example: G.report @Daeshan no cursing! (NOTE: MUST have a channel called report.)
