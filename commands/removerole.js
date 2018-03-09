@@ -12,10 +12,9 @@ module.exports.run = async (bot, message, args) => {
   if(!rMember.roles.has(gRole.id)) return message.reply("They don't have that role.");
   await(rMember.removeRole(gRole.id));
 
-  try{
-    await rMember.send(`RIP, you lost the ${gRole.name} role.`)
-  }catch(e){
-    message.channel.send(`RIP to <@${rMember.id}>, We removed ${gRole.name} from them. We tried to DM them, but their DMs are locked.`)
+try{
+    await rMember.send(`You Have Been Removed From the Role <@${rRole.id}>.`)
+    message.channel.send(`Oh No! <@${rMember.id}> has been removed from the role <@${rRole.id}>. RIP`)
   }
 }
 
