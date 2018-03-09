@@ -13,9 +13,9 @@ module.exports.run = async (bot, message, args) => {
   await(rMember.removeRole(gRole.id));
 
   try{
-    await rMember.send(`R.I.P. ${gMember.name}, I removed a role from you. That role is ${gRole.name}. Sorry!`)
+    await rMember.send(`R.I.P. ${rMember.name}, I removed a role from you. That role is ${gRole.name}. Sorry!`)
   }catch(e){
-    message.channel.send(`RIP to ${gMember.name}>, I removed ${gRole.name} from them. We tried to DM them, but their DMs are locked.`)
+    message.channel.send(`RIP ${rMember.name}, I removed ${rRole.name} from them. We tried to DM them, but their DMs are locked.`)
   }
 }
 module.exports.help = {
