@@ -25,8 +25,8 @@ fs.readdir("./commands/", (err, file) => {
 
 
 bot.on("ready", async () => {
-    console.log(`${bot.user.username} is online!`);
-    bot.user.setActivity("Playing Overwatch Scripts")
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("Overwatch", {type: "PLAYING"});
 });
 
 bot.on("message", async message => {
