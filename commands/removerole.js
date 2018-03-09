@@ -13,8 +13,8 @@ module.exports.run = async (bot, message, args) => {
   await(rMember.removeRole(gRole.id));
 
 try{
-    await rMember.send(`You Have Been Removed From the Role <@${rRole.id}>.`)
-    message.channel.send(`Oh No! <@${rMember.id}> has been removed from the role <@${rRole.id}>. RIP`)
+    await rMember.send(`You Have Been Removed From the Role <@${rRole.id}>.`);
+    message.channel.send(`Oh No! <@${rMember.id}> has been removed from the role <@${rRole.id}>. RIP`);
   }
 }
 
