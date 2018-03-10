@@ -1,6 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+        if(args[0] == "help"){
+        message.reply("Usage: G.serverinfo");
+        return;
+      }
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
     .setDescription("Server Information")
