@@ -1,7 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-
+        if(args[0] == "help"){
+        message.reply("Usage: G.mute <user> <time>");
+        return;
+      }
 let replies = ["Heads", "Tails",];
 
 let result = Math.round(Math.random())
