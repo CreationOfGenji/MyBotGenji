@@ -1,6 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+        if(args[0] == "help"){
+        message.reply("Usage: G.botinfo");
+        return;
+      }
     let bicon = bot.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setDescription("Bot Information")
