@@ -5,7 +5,11 @@ module.exports.run = async (bot, message, args) => {
     let helpembed = new Discord.RichEmbed()
     .setDescription("Help Menu")
     .setColor("#8300ff")
-    .addField("Member Commands:", "help, serverinfo, botinfo, userinfo, and report.");
+    .addField("Member Commands:", "help, serverinfo, botinfo, userinfo, and report.")
+    .addField("Fun Commands:", "roll, flip, say")
+    .addField("Misc:", "ping, avatar.")
+    .addField("Credits:", "Credits to Dovixx#1884 For Helping Me Fix Bugs!")
+    .addField("Support Server:", "https://discord.gg/EEPHpuS")
 
     message.channel.send(helpembed);
 
