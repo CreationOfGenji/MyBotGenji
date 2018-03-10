@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
   
       if(args[0] == "help"){
-        message.reply("Usage: G.mute <user> <time>");
+        message.reply("Usage: G.purge <ammount>");
         return;
       }
   message.delete().catch();
