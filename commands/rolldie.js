@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         return;
       }
 
-         var roll = Math.round(Math.random() * 6) + 1);
+         var roll = Math.round(Math.random() * 6) + 1;
         message.reply("The die rolled on a " + roll);
   
     }
