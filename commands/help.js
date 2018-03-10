@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Fun Commands:", "roll, flip, say")
     .addField("Misc:", "ping, avatar.")
     .addField("Credits:", "Credits to Dovixx#1884 For Helping Me Fix Bugs!")
-    .addField("Support Server:", "https://discord.gg/EEPHpuS")
+    .addField("Support Server:", "https://discord.gg/EEPHpuS");
 
     message.channel.send(helpembed);
 
