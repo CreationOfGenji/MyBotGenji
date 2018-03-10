@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        if(args[0] == "help"){
+        message.reply("Usage: G.report <user> <reason>");
+        return;
+      }
     if(!rUser) return message.channel.send("Coulden't Find User.");
     let reason = args.join(" ").slice(22);
 
