@@ -1,7 +1,11 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-
+    
+        if(args[0] == "help"){
+        message.reply("Usage: G.mute <user> <time>");
+        return;
+      }
     AvatarEmbed = new Discord.RichEmbed()
     .setTitle("Avatar")
     .setColor("#f9f500")
