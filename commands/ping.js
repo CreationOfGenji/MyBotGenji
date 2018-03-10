@@ -2,13 +2,15 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-message.channel.send('Pong...').then((msg) => {
-   msg.edit(`Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API latency is ${Math.round(client.ping)}ms.`);
-});
-}
+  PingEmbed = new Discord.RichEmbed()
+  .setTitle("Pong!")
+  .setColor("#c3bacc")
+  .addField("Took:", bot.pings[0] + "ms");
+
+  message.channel.send(PingEmbed)
 
 }
 
-module.exports.help = {
+module.exports.help ={
   name: "ping"
 }
