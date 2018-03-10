@@ -10,7 +10,7 @@ let question = args.slice(0).join(" ");
 let flipembed = new Discord.RichEmbed()
 .setColor("#1b0ece")
 .setAuthor(message.author.tag)
-.addField("The coin landed on", replies[result]+result)
+.addField("The coin landed on", replies[result])
 
 message.channel.send(flipembed);
 
