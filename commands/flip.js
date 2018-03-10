@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
 let replies = ["Heads", "Tails",];
 
-let result = Math.floor((Math.random(1, 2))
+let result = Math.floor(Math.random(1,2))
 let question = args.slice(0).join(" ");
 
 let flipembed = new Discord.RichEmbed()
