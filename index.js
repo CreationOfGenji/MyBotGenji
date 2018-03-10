@@ -4,6 +4,10 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+if (command === 'ping') {
+  message.channel.send(Pong...).then((msg) = {
+    msg.edit(`Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms.`);
+
 
 fs.readdir("./commands/", (err, file) => {
   
