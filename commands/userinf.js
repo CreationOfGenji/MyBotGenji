@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let userEmbed = new Discord.RichEmbed()
     .setDescription("Userinfo")
     .setColor("#2e26d3")
-    .setThumbnail(`${uUser.displayAvatarURL}`)
+    .setThumbnail(${uUser.displayAvatarURL})
     .addField("Username:", `${uUser}`)
     .addField("User ID:", `${uUser.id}`)
     .addField("Joined On", message.guild.joinedAt)
