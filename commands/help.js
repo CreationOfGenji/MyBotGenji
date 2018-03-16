@@ -5,28 +5,14 @@ module.exports.run = async (bot, message, args) => {
     let helpembed = new Discord.RichEmbed()
     .setDescription("Help Menu")
     .setColor("#8300ff")
-    .addField("Member Commands:", "help, serverinfo, botinfo, userinfo, and report.")
+    .addField("Member Commands:", "help, serverinfo, botinfo, userinfo")
     .addField("Fun Commands:", "roll, flip, say")
-    .addField("Misc:", "ping, avatar.")
+    .addField("Misc:", "ping, avatar, help, prefix")
     .addField("Credits:", "Credits to Dovixx#1884 For Helping Me Fix Bugs!")
+    .addField("Mod Commands", "addrole, removerole, kick, ban, purge, mute")
     .addField("Support Server:", "https://discord.gg/EEPHpuS");
 
     message.channel.send(helpembed);
-
-    if(message.member.hasPermission("ADMINISTRATOR")){
-    let modembed = new Discord.RichEmbed()
-    .setDescription("Mod Help Menu")
-    .setColor("#8300ff")
-    .addField("Mod Commands", "addrole, removerole, kick, ban")
-
-    try{
-        await message.author.send(modembed);
-        message.react("✔");
-    }catch(e){
-        message.reply("Your DMs are locked. I Cannot send you the mod commands.");
-    }
-}  
-
 }
 
 module.exports.help = {
