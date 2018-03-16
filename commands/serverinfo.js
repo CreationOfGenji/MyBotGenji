@@ -12,7 +12,6 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(sicon)
     .addField("Server Name", message.guild.name)
     .addField("Created On", message.guild.createdAt)
-    .addField("You Joined", message.member.joinedAt)
     .addField("Total Members", message.guild.memberCount)
     .addField("Guild Owner", message.guild.owner);
 
