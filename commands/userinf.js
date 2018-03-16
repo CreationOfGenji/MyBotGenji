@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Username:", `${uUser}`)
     .addField("User ID:", `${uUser.id}`)
     .addField("Joined On", message.guild.joinedAt)
-    .addField("User Avatar:", uUser.displayAvatarURL);
+    .addField("User Avatar:", `uUser.displayAvatarURL`);
 
     message.channel.send(userEmbed)
 
