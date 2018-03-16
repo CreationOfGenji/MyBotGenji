@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(message.mentions.users.first().iconURL)
     .addField("Username:", `${uUser}`)
     .addField("User ID:", `${uUser.id}`)
-    .addField("Joined On", message.guild.joinedAt)
+    .addField("Joined On", message.guild.joinedAt);
 
     message.channel.send(userEmbed)
 
