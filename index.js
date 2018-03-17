@@ -31,6 +31,32 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
   
+  const clean = text => {
+    if (typeof(text === "string")
+        return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+    else
+        return text;
+}
+  
+  bot.on("message", message => {
+    const args = message.content.split(" ").slice(1);
+    
+    if(message.content.startsWith(botconfig.prefix + "exec")) {
+      if(message.author.id !== botconfig.ownerID) return;
+      try {
+        const code = args.join(" ");
+        let evaled = eval(code);
+        
+        if (typeof evaled !== "string")
+          evaled = require("util").inspect(evaled);
+        
+        message.channel.send(clean(evaled), {code: "xl"});
+      } catch (err) {
+        message.channel.send(`\`ERROR\`\`\`\`xl\n${clean(err)}\n`\`\``);
+      }
+    }
+});
+  
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
