@@ -39,16 +39,13 @@ bot.on("message", async message => {
       try {
         const code = args.join(" ");
         let evaled = eval(code);
-        
         if (typeof evaled !== "string")
-          evaled = require("util").inspect(evaled);
-        
-        message.channel.send(clean(evaled), {code: "xl"});
+          evaled = evaled.toString();
+         message.channel.send(evaled)
+      
       } catch (err) {
-        message.channel.send(`\`ERROR\`\`\`\`xl\n${clean(err)}\n`\`\``);
+       message.channel.send("**" + err.name + "** " + err.message)
       }
-    }
-});
   
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
