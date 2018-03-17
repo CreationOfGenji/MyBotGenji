@@ -31,22 +31,6 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
   
-  bot.on("message", message => {
-    const args = message.content.split(" ").slice(1);
-    
-    if(message.content.startsWith(botconfig.prefix + "exec")) {
-      if(message.author.id !== botconfig.ownerID) return;
-      try {
-        const code = args.join(" ");
-        let evaled = eval(code);
-        if (typeof evaled !== "string")
-          evaled = evaled.toString();
-         message.channel.send(evaled)
-      
-      } catch (err) {
-       message.channel.send("**" + err.name + "** " + err.message)
-      }
-  
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
