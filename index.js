@@ -14,13 +14,6 @@ fs.readdir("./commands/", (err, file) => {
     return;
   }
 
-  jsfile.((f, i) =>{
-    let props = require(`./commands/${f}`);
-    console.log(`${f} loaded!`);
-    bot.commands.set(props.help.name, props);
-  });
-});
-
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setActivity("Overwatch", {type: "PLAYING"});
