@@ -1,16 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let madamaEmbed = new Discord.RichEmbed()
-    .setDescription("MadaMada")
-    .setColor("##72c920")
-    .addField("Mada Mada I am genji!")
-    .addField("You are worthy",)
-    .addField("And I Am Genji.")
+    if(message.content.startsWith(botconfig.prefix + madamada))
+        message.channel.send("Mada Mada!");
 
-    return;
-}
-
-module.exports.help = {
-    name: "madamada"
 }
