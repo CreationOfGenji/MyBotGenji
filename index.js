@@ -13,6 +13,14 @@ fs.readdir("./commands/", (err, file) => {
     console.log("Couldn't Find Commands.");
     return;
   }
+  
+
+  jsfile.forEach((f, i) =>{
+    let props = require(`./commands/${f}`);
+    console.log(`${f} loaded!`);
+    bot.commands.set(props.help.name, props);
+  });
+});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
