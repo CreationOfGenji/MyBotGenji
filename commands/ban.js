@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         message.reply("Usage: G.ban <user>");
         return;
       }
-    if("bUser") return message.channel.send("Can't find user!");
+    if(!bUser) return message.channel.send("Can't find user!");
     let bReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_ROLES, MANAGE_SERVER")) return message.channel.send("No can do pal!");
     if(bUser.hasPermission("MANAGE_ ROLES, MANAGE_SERVER")) return message.channel.send("That person can't be banned!");
